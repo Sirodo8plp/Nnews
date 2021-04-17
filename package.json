@@ -4,13 +4,7 @@
   "description": "News Site to practice new concepts",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss style.comp.css",
-    "concat:css": "concat -o style.concat.css style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' style.concat.css style.prefix.css",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css"
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",

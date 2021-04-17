@@ -36,12 +36,12 @@ const database = require(__dirname + "/schemas.js");
 const collections = new database(mongoose);
 const axios = require("axios");
 const nyt_link = "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=" + config.nyt_api_key;
-
+const PORT = process.env.PORT || 3000;
 /****************************\
 *         LISTEN PORT       * 
 \****************************/
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server started");
 });
 
