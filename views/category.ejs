@@ -1,0 +1,63 @@
+<%- include("header") -%>
+
+<div class="main-content">
+
+    <main class="article-container">
+        <% if (article_list === null || !article_list || article_list.length === 0) { %>
+            <div class="article-container__hotline">
+                <div class="article-container__hotline-image-container">
+                    <img src="/img/not_found_img.jpg.png" alt="Hotline Image" class="article-container__hotline-image">
+                </div>
+                <div class="article-container__hotline-details">
+                    <h1 class="article-container__hotline-title">Oups!Looks like there are no articles about this topic for now.</h1>
+                    <p class="article-container__hotline-summary">
+                        But do not worry!News api is constantly evolving and all the articles will soon be collected.
+                    </p>
+                    <a href="https://newsapi.org/" class="button button--article">Learn more about News Article!</a>
+                </div>
+            </div>
+        <%}else{ for(let i = 0; i<article_list.length; i++){ %>
+        <div class="article-container__hotline">
+            <div class="article-container__hotline-image-container">
+                <% if(article_list[i].urlToImage){ %>
+                <img src="<%=article_list[i].urlToImage%>" alt="Hotline Image" class="article-container__hotline-image">
+                <%}else{%>
+                <img src="/img/not_found_img.jpg.png" alt="Hotline Image" class="article-container__hotline-image">
+                <%}%>
+                            </div>
+                            <div class="article-container__hotline-details">
+                                <h1 class="article-container__hotline-title"><%=article_list[i].title%></h1>
+                <p class="article-container__hotline-summary">
+                    <%=article_list[i].description %>
+                </p>
+                <a href="<%=article_list[i].url%>" class="button button--article">Read the article</a>
+            </div>
+        </div>
+        <% } %>
+        <button class="article-container__hotline-viewMore" id="expandCategory" name="<%=cat%>">View More</button>
+    <%}%>
+    </main>
+    <section class="breaking-news">
+        <h2 class="breaking-news__title">Breaking News</h2>
+
+        <%for(let i =0; i< breaking_news.length; i++){ %>
+            <div class="breaking-news__box">
+                <h1 class="breaking-news__sub-title"><%=breaking_news[i].title%></h1>
+                <blockquote class="breaking-news__summary">
+                    <%=breaking_news[i].abstract %>
+                    <button class="breaking-news__summary-button" onclick="location.href = '<%=breaking_news[i].url%>'">Read More &rarr;</button>
+                </blockquote>
+                <div class="breaking-news__creator">
+                    <img src="/img/breakingNews.png" alt="NYT Logo" class="breaking-news__creator-image">
+                    <h1 class="breaking-news__creator-name"><%=breaking_news[i].byline%></h1>
+                    <h2 class="breaking-news__date"><%=breaking_news[i].published_date%></h2>
+                </div>
+            </div>
+        <%}%>
+        <div class="breaking-news__copyright">
+            <p>&copy;2021 Athens,Greece.All rights reserved.</p>
+        </div>
+    </section>
+</div>
+<script src="/javascript/view_more_category.js"></script>
+<%- include("footer") -%>

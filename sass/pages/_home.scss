@@ -1,0 +1,14 @@
+.main-content{
+    margin-top: 1rem;
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    
+    @include respond(mobile){
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+

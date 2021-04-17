@@ -1,0 +1,25 @@
+.article-tags{
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+
+        & li:not(:last-child) {margin-right: 1.5rem;}
+    }
+
+    &__category{
+        font-size: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgba($primary-color-first-layer,0.9);
+    }
+
+    &__svg{
+        width: 4rem;
+        height: 4rem;
+        fill: $primary-color-first-layer;
+        margin-right: 1.5rem;
+    }
+}

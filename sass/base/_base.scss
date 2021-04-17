@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 1rem;
+    font-family: "Lato" , sans-serif;
+
+    @include respond(mobile){
+        padding: 0;
+    }
+}
+
+html{
+    font-size: 62.5%;
+
+    @include respond(tablet-land){
+        font-size: 56.25%;
+    }
+
+    @include respond(tablet-port){
+        font-size: 50%;
+    }
+
+    @include respond(phone){
+        font-size: 43.75%;
+    }
+}

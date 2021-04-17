@@ -1,0 +1,32 @@
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin horizontalCenter {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%,-2%);
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em){@content;}
+    }
+    @if $breakpoint == tablet-port{
+        @media only screen and (max-width: 56.25em){@content;}
+    }
+
+    @if $breakpoint == tablet-land{
+        @media only screen and (max-width: 75em) {@content;}
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 120em) {@content;}
+    }
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 75em) {@content;}
+    }
+}

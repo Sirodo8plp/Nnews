@@ -1,0 +1,61 @@
+.button:link {
+    margin: 4rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2rem 3rem;
+    border-radius: 10rem;
+    word-spacing: .3rem;
+    letter-spacing: .3rem;
+    transition: all .4s;
+    text-align: center;
+}
+
+.button--breaking-news {
+    background-color: $color-button;
+    color: $color-white;
+
+    @include respond(desktop) {
+        &:hover {
+            color: $color-button;
+            background-color: #fff;
+        }
+    }
+
+    @include respond(mobile) {
+        &:hover {
+            background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        }
+
+        &:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+        }
+    }
+}
+
+.button--article {
+    align-self: center;
+    display: block !important;
+    font-size: 2rem;
+    padding: 1rem .5rem !important;
+    font-size: 1.5rem !important;
+    background-color: $primary-color-first-layer;
+    color: #fff;
+    transition: all .3s;
+    width: 50%;
+
+    @include respond(mobile) {
+        &:hover {
+            background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        }
+
+        &:active {
+            background-color: #6eb9f7;
+            background-size: 100%;
+            transition: background 0s;
+        }
+    }
+}

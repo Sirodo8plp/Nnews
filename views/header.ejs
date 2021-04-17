@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title>NewNews</title>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+    <nav class="navigation">
+        <input type="checkbox" class="navigation__button" name="navigation__button" id="navigation__button">
+        <label for="navigation__button" class="navigation__label">
+            <span class="navigation__label--line"></span>
+            <span class="navigation__label--line"></span>
+            <span class="navigation__label--line"></span>
+        </label>
+        <div class="navigation__categories">
+            <ul class="navigation__list">
+                <li><a href="/category/politics" class="navigation__item">politics</a></li>
+                <li><a href="/category/technology" class="navigation__item">technology</a></li>
+                <li><a href="/category/lifestyle" class="navigation__item">Lifestyle</a></li>
+                <li><a href="/" class="navigation__item">NNews</a></li>
+                <li><a href="/category/economics" class="navigation__item">Economy</a></li>
+                <li><a href="/category/sports" class="navigation__item">Sports</a></li>
+                <li><a href="/category/art" class="navigation__item">Art</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav>
+        <form class="search" method="post" action="/search">
+            <input type="text" class="search__input"  name="topic" placeholder="Search a topic...">
+            <input type="submit" class="search__button" value="Search" id="search_topic">
+        </form>
+    </nav>
+    <header class="header u-margin-top-small">
+        <h2>From</h2>
+        <h1>
+            N<span class="header__logo">ew</span>
+            N<span class="header__logo">ews</span>
+        </h1>
+        <h2>1983</h2>
+    </header>
